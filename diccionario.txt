@@ -1,0 +1,94 @@
+
+git config --global user.name "Nuestro nombre"
+
+git config --global user.email "nuestro correo"
+
+
+
+
+git init
+
+git status
+
+
+
+git add "añadir archivo"
+
+git add --all
+
+git add .
+
+
+git commit -m "comentarios"
+git commit --amend -m 'Comentrios'
+
+Ver hisorial
+
+git log
+
+
+git diff -> muestra las diferencias
+git diff -stage
+git reset --soft IDENTIFICADOR_DEL_COMMIT --> DEJARÁ TODO LO QUE TENÍA NUESTRO ÚLTIMO COMMIT EN STAGE
+git reset --hard IDENTIFICADOR_DEL_COMMIT -->Eliminará el commit junto con todos sus cambios
+
+
+
+Trabajando con escritorios Remotos
+
+GitHub
+Bitbucket
+
+
+
+git remote add origin git@github.com:usuario/repositorio.git
+
+Donde usuario se refiere a nuestro nombre de usuario en GitHub y repositorio al nombre que le dimos al crearlo. Luego ya que tengamos algunos commits en nuestro proyecto local debemos teclear lo siguiente:
+
+git push -u origin master
+
+Al especificar -u origin master estamos indicando un upstream de manera que, posteriormente podremos ejecutar solamente git push y nuestros cambios se almacenarán en nuestro origin de GitHub utilizando siempre el branch master.
+
+
+
+git pull
+
+Esto descargará todos los cambios que hayamos realizado en nuestro equipo local.
+
+
+Open Git Bash.
+
+Paste the text below, substituting in your GitHub email address.
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+# Creates a new ssh key, using the provided email as a label
+Generating public/private rsa key pair.
+When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+If you are using another terminal prompt, such as Git for Windows, turn on ssh-agent:
+
+# start the ssh-agent in the background
+eval $(ssh-agent -s)
+Agent pid 59566
+Add your SSH key to the ssh-agent. If you used an existing SSH key rather than generating a new SSH key, you'll need to replace id_rsa in the command with the name of your existing private key file.
+
+$ ssh-add ~/.ssh/id_rsa
+
+
+#########
+
+clip < ~/.ssh/id_rsa.pub
+
+PC Laptop casa
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCkgLy4kZnPubdlED8y4YcykhA4bDf5NIafZfvR78LGKh/cuBq505GbkLK/Y6tQrCPfmhojvDlbuZtcBqBN/bIsIC5VXjrt1nn8yeTlBYD0Gpwvwz7dGFGP7jzOyDYxTMdGCTlOd32b5yym9P8vO8QhrZHh3pLsaZSS1glJ2eSQe8IQTx0yvXBXC/f8d0fjoE/llRGmC0/Oev5DcvTyTgKqVmtRingIGGsEEAPP371ZnuU/knb5ggw454KtD7YyhfbKHdPfWQ3KXqNEI7CNod8cOxnAOOFtB9PYdqpLwHJkbxwtjaznPIOteLZj/0lxB6QEkitmA1W+hf7zpMp860CbWAsmO3UkxsJS7GHRrmuwM3aZp9fRbFvDYeLFKIR39GbjzCJjSaA1pVhNyjHmEC5sl+Ck4Q7bittCK20QAjkVGcu3/gjPwRsFPfjjK3cX62+8ju7LiCmUyNQEjjLFwjZc0w8amkW03KKkoF3zZftP3LzeGegRfPtcu+sOAqBy2esChX7xob1w/ajJZrbIDSj5nSorITl8y1YBrgP48hdJQKGc7+BXJSeTWCqixNWrfGc5f4q7xcrnt7vuahlGvq6NRyn1Mwb2vtvhroA/3q7MF/e+szAfVZtUd7L3ZGuW28suhBSoQQR30hZZ/wGOqzJFWI2Zpw4ZwCa5CBgTy44fGw== gambitos19@hotmail.com
+
+
+PC Laptop Trabajo
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiFmyjadeVsB2b/9n68+dU5AloNdkGYd0tP+K1MxRcc4dS9DIXUTA7OdWpTe/WrvUmcoMnxlvm2rc/Mdz1fE/nd9CkK8jytInUcPRMD+/7saAScZIt2evwNE5hHBLkcADzd0ojgxeZ4DebSwa706YxeVySW4/VwAQSDoHmOwVIVhDCw0p3TzVCzqCX+s9849J7fV6LbdU4Dasbrai7auBRmG1YXJl6mIvlDjj3R59q0aImiK53GWvyivJS/2PdAgZtek1QbsXIFMJ/hOfaIn0gv/sTKhVd6CzzNdZ5pXQYZMOx35eZANp+nBPpK4+xiEwsEi05OjDGJntVcpSPeGY4XW8gKuljXuqaVEm3FDwvIUPHYnco0nC+xfzgECDOb4l5ApMtwS3k13BKYMce2TGoE/aRerxmj27DswY4ToS1O4NaCqzcqvRGez0Tpf4itWKsTGogQ7bLJbd6qfobxWlSUonaTTVgHyi++1il4ts+9GqgcjkKdYAshc5nTfbW9SbLzCKCs8TlVlAQeGlpVtQJS6jGlJ15eP+XpfiHCXn8ozKETEltNC/c6E+GtnbZj5zkKfLnSxNMxzFS+gjvI0nmDyLBaOsx3i6KueHgNJ2gCmUW7F1FjAF80cdm+LML6lnVYu4L08OLjWUZ2atWkzvuMnWzJmclUnK+suz6gdivVQ== gambitos19@hotmail.com
+
+
+
+
+
+
+
+
