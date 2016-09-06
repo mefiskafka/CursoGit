@@ -32,7 +32,7 @@ git diff -stage
 git reset --soft IDENTIFICADOR_DEL_COMMIT --> DEJARÁ TODO LO QUE TENÍA NUESTRO ÚLTIMO COMMIT EN STAGE
 git reset --hard IDENTIFICADOR_DEL_COMMIT -->Eliminará el commit junto con todos sus cambios
 
-
+###################################################
 
 Trabajando con escritorios Remotos
 
@@ -84,6 +84,33 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCkgLy4kZnPubdlED8y4YcykhA4bDf5NIafZfvR78LG
 
 PC Laptop Trabajo
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiFmyjadeVsB2b/9n68+dU5AloNdkGYd0tP+K1MxRcc4dS9DIXUTA7OdWpTe/WrvUmcoMnxlvm2rc/Mdz1fE/nd9CkK8jytInUcPRMD+/7saAScZIt2evwNE5hHBLkcADzd0ojgxeZ4DebSwa706YxeVySW4/VwAQSDoHmOwVIVhDCw0p3TzVCzqCX+s9849J7fV6LbdU4Dasbrai7auBRmG1YXJl6mIvlDjj3R59q0aImiK53GWvyivJS/2PdAgZtek1QbsXIFMJ/hOfaIn0gv/sTKhVd6CzzNdZ5pXQYZMOx35eZANp+nBPpK4+xiEwsEi05OjDGJntVcpSPeGY4XW8gKuljXuqaVEm3FDwvIUPHYnco0nC+xfzgECDOb4l5ApMtwS3k13BKYMce2TGoE/aRerxmj27DswY4ToS1O4NaCqzcqvRGez0Tpf4itWKsTGogQ7bLJbd6qfobxWlSUonaTTVgHyi++1il4ts+9GqgcjkKdYAshc5nTfbW9SbLzCKCs8TlVlAQeGlpVtQJS6jGlJ15eP+XpfiHCXn8ozKETEltNC/c6E+GtnbZj5zkKfLnSxNMxzFS+gjvI0nmDyLBaOsx3i6KueHgNJ2gCmUW7F1FjAF80cdm+LML6lnVYu4L08OLjWUZ2atWkzvuMnWzJmclUnK+suz6gdivVQ== gambitos19@hotmail.com
+
+
+
+
+
+################################
+Servidores Remotos
+
+
+
+git remote add origin git@github.com:usuario/repositorio.git
+
+Donde usuario se refiere a nuestro nombre de usuario en GitHub y repositorio al nombre que le dimos al 
+crearlo. Luego ya que tengamos algunos commits en nuestro proyecto local debemos teclear lo siguiente:
+
+
+
+git push -u origin master
+
+Al especificar -u origin master estamos indicando un upstream de manera que, posteriormente podremos 
+ejecutar solamente git push y nuestros cambios se almacenarán en nuestro origin de GitHub utilizando
+siempre el branch master.
+
+
+git pull
+
+Descargamos todos los cambios a nuestro equipo local
 
 
 
